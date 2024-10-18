@@ -1,23 +1,54 @@
-
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CLIENTES LINEAR</title>
-    <style>
+  <style>
+        body {
+            background-color: #8B0000;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
         #map {
             height: 600px;
             width: 100%;
+            margin-top: 20px;
         }
-		h1 {
-		text-align: center;
-		
-		body {
-		background-color:#8B0000;
-		}
-		
-		
-		
+        h1 {
+            margin: 20px 0;
+        }
+        #search-container {
+            margin: 20px 0;
+        }
+        #search-input {
+            padding: 10px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+        #search-city {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        #search-city:hover {
+            background-color: #45a049;
+        }
+        #city-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        #city-list li {
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +56,9 @@
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEYVrBdLuoKFDsaRKFY0rmVZyphdqfGV0&callback=initMap" async defer></script>
     <script>
-        function initMap() {
+	
+
+    function initMap() {
     const camargos = { lat: -19.917299, lng: -44.083365 };
     const juatuba = { lat: -19.9511, lng: -44.3459 };
     const paraDeMinas = { lat: -19.8605, lng: -44.6083 };
@@ -430,10 +463,14 @@ const vitoriaDeSantoAntao = { lat: -8.118, lng: -35.292 };
                 });
             });
 
-         
-
-            line.setMap(map);
+           
+			
+			
+			
         }
+		
+		
+	
     </script>
 </body>
 </html>
