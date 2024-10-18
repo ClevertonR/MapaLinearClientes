@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,7 @@
             margin-top: 20px;
         }
         h1 {
-            margin: 20px 0;
+            margin: 10px 0;
         }
         #search-container {
             margin: 20px 0;
