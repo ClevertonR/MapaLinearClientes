@@ -463,16 +463,7 @@ const vitoriaDeSantoAntao = { lat: -8.118, lng: -35.292 };
                 });
             });
 
-          const bounds = new google.maps.LatLngBounds();
-            bounds.extend(castelo); 
-			new google.maps.LatLng(-19.8884045368196, -44.00249354784006) 
-			map.fitBounds(bounds);
-			locations.forEach(location => {
-           new google.maps.Marker({
-           position: location,
-           map: map
-           });
-           }); 
+          
 			
 			
 			
