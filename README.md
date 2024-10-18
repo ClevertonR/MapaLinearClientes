@@ -430,13 +430,13 @@ const vitoriaDeSantoAntao = { lat: -8.118, lng: -35.292 };
                 });
             });
 
-            const line = new google.maps.Polyline({
+          <!--  const line = new google.maps.Polyline({
                 path: locations,
                 geodesic: true,
                 strokeColor: '#FF0000',
                 strokeOpacity: 50.0,
                 strokeWeight: 1
-            });
+            });-->
 
             line.setMap(map);
         }
