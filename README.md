@@ -137,7 +137,7 @@
     const carmoDoParanaiba = { lat: -19.0008, lng: -46.3167 };
     const carrancas = { lat: -21.4889, lng: -44.6442 };
     const caruaru = { lat: -8.2833, lng: -35.9761 };
-    const castelo = { lat: -20.6033, lng: -41.2033 };
+    const castelo = { lat: -19.8884045368196, lng: -44.00249354784006 };
     const cataguases = { lat: -21.3928, lng: -42.6961 };
     const catalao = { lat: -18.1658, lng: -47.9442 };
     const catasAltas = { lat: -20.0733, lng: -43.4061 };
@@ -452,7 +452,7 @@ const vitoriaDeSantoAntao = { lat: -8.118, lng: -35.292 };
 
             const map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
-                center: camargos
+                center: castelo
             });
 
             const locations = [camargos,juatuba,paraDeMinas,mateusLeme,saoPaulo,aguaBoa,aguasLindasDeGoias,aimores,alagoinhas,alcobaca,alemParaiba,almenara,alterosa,altoJequitiba,alvinopolis,andrelandia,angelandia,antonioDias,aparecidaDeGoiania,aracruz,aracUai,araraquara,areado,aricanduva,armacaoDosBuzios,arraialDoCabo,autazes,baependi,baldim,bambui,baraoDeCocais,barbacena,barraDeSaoFrancisco,barueri,beloHorizonte,beloVale,berilo,bertioga,betim,bezerros,bhte,boaVista,bocaiuva,bomDespacho,bomJardimDeMinas,bomJesusDoAmparo,bonfim,bonitoDeMinas,bragancaPaulista,brasilia,brasiliaDeMinas,brejetuba,brumadinho,buenopolis,buerarema,bujaru,buritizeiro,cachoeiroDeItapemirim,caetanopolis,caete,cafarnaum,camaragibe,cambui,campinas,campoGrande,candeias,canoas,capelinha,capitaoEneas,carandai,carangola,caravelas,cariacica,carlosChagas,carmoDoCajuru,carmoDoParanaiba,carrancas,caruaru,castelo,cataguases,catalao,catasAltas,chapadaGaucha,cidadeOcidental,claroDosPocoes,claudio,coari,comercinho,conceicaoDoMatoDentro,conselheiroLafaiete,contagem,coracaoDeJesus,cordisburgo,corinto,coronelFabriciano,corumba,cotia,coutoDeMagalhaesDeMinas,crato,cristalia,cristalina,curitiba,curvelo,descalvado,diadema,diamantina,diogoDeVasconcelos,divino,divinolandiaDeMinas,divinopolis,domSilverio,domingosMartins,donaEusebia,doresDoIndaia,dourados,engenheiroNavarro,esmeraldas,espinosa,euclidesDaCunha,feiraDeSantana,felicioDosSantos,felixlandia,florestaAzul,florestal,florianopolis,formiga,formosa,franciscoDumont,franciscoSa,funilandia,goiania,gouveia,governadorValadares,graoMogol,guaraciama,guarapari,guarulhos,hortolandia,ibirite,ibiuna,icaraiDeMinas,igarape,indaiatuba,inhapi,inhauma,inimutaba,ipameri,ipatinga,irece,itabira,itabirito,itabuna,itacarambi,itacoatiara,itaipe,itajai,itamaraju,itamarandiba,itamaratiDeMinas,itambe,itambeDoMatoDentro,itanhem,itaobim,itapecerica,itapevi,itapissuma,itarantim,itatiaiuçu,itauna,itinga,itu,iuna,juizDeFora,lagamar,lagoaDaPrata,lagoaSanta,lajeado,lajedao,lambari,laranjal,lassance,lemeDoPrado,leopoldina,limeira,limeiraDoOeste,linhares,lontra,lucasDoRioVerde,luislandia,luminarias,luziania,maceio,mairipora,mambai,manacapuru,manaus,manga,manicore,mantena,marataizes,maravilhas,mariana,martinhoCampos,martinsSoares,mataVerde,matiasBarbosa,matoVerde,matozinhos,medina,minasNovas,mineiros,mirai,moeda,montesClaros,mutum,natal,neropolis,ninheira,niteroi,novaEra,novaIguacu,novaLima,novaModica,novaOlindaDoNorte,novaPorteirinha,novaSerrana,novaUniao,novoGama,osasco,ouricuri,ouroBranco,ouroPreto,pacaembu,papagaios,paraDeminas,paracatu,paracuru,paraipaba,paranaiba,paraopeba,parintins,patosDeMinas,patrocinioDoMuriae,paulista,pedraAzul,pedrasDeMariaDaCruz,pedroLeopoldo,pescador,piata,piedadeDeCaratinga,pinhais,piracema,piracicaba,pirapetinga,pirapora,pitangui,piuma,piumhi,planaltina,pombos,pompeu,ponteNova,pontoDosVolantes,porteirinha,portoFeliz,pousoAlegre,prado];
@@ -463,7 +463,16 @@ const vitoriaDeSantoAntao = { lat: -8.118, lng: -35.292 };
                 });
             });
 
-           
+          const bounds = new google.maps.LatLngBounds();
+            bounds.extend(castelo); 
+			new google.maps.LatLng(-19.8884045368196, -44.00249354784006) 
+			map.fitBounds(bounds);
+			locations.forEach(location => {
+           new google.maps.Marker({
+           position: location,
+           map: map
+           });
+           }); 
 			
 			
 			
