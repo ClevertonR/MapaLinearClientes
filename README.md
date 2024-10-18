@@ -52,7 +52,7 @@
     </style>
 </head>
 <body>
-    <h1>ONDE ESTÂO TODOS OS NOSSOS CLIENTES LINEAR SISTEMAS</h1>
+    <h1>Aqui estão todos os nososos Clientes</h1>
     <div id="map"></div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEYVrBdLuoKFDsaRKFY0rmVZyphdqfGV0&callback=initMap" async defer></script>
     <script>
